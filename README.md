@@ -15,8 +15,8 @@ This project is designed to create a website for a Discord bot. Users can access
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+   git clone https://github.com/Rynix01/Discord-Bot-Website.git
+   cd Discord-Bot-Website
    ```
 
 2. **Install Dependencies:**
