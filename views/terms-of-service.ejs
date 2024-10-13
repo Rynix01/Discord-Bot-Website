@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | Terms of Service</title>
+    <link rel="shortcut icon" href="<%= links.icon %>" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/output.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen text-white"
+  >
+    <%- include('partials/header') %>
+
+    <div class="container mx-auto px-4 py-10">
+      <h1 class="text-3xl font-bold mb-6 text-center">Terms of Service</h1>
+
+      <div class="bg-gray-800 p-6 rounded-md">
+        <h2 class="text-xl font-semibold mb-4">1. Acceptance of Terms</h2>
+        <p>
+          By using our bot, you agree to these terms. If you do not agree, do
+          not use the bot.
+        </p>
+        <br />
+        <h2 class="text-xl font-semibold mb-4">2. Modifications to Terms</h2>
+        <p>
+          We reserve the right to modify these terms at any time. Changes will
+          be posted on this page.
+        </p>
+        <br />
+
+        <h2 class="text-xl font-semibold mb-4">3. User Responsibilities</h2>
+        <p>
+          Users are responsible for their behavior while using the bot and must
+          adhere to all applicable laws.
+        </p>
+        <br />
+
+        <h2 class="text-xl font-semibold mb-4">4. Limitation of Liability</h2>
+        <p>
+          We are not liable for any damages or losses resulting from the use or
+          inability to use the bot.
+        </p>
+        <br />
+
+        <h2 class="text-xl font-semibold mb-4">5. Governing Law</h2>
+        <p>These terms are governed by the laws of your jurisdiction.</p>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | Commands</title>
+    <link rel="shortcut icon" href="<%= links.icon %> " type="image/x-icon" />
+    <link rel="stylesheet" href="/css/output.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen text-white"
+  >
+    <%- include('partials/header') %>
+
+    <div class="container mx-auto px-4 py-10">
+      <h1 class="text-3xl font-bold mb-6 text-center">Commands</h1>
+      <div id="commands-list" class="space-y-4">
+        <% commands.forEach((command, index) => { %>
+        <div
+          class="command-item bg-gray-800 p-4 rounded-md cursor-pointer"
+          onclick="toggleCommandDetails('command<%= index + 1 %>')"
+        >
+          <h2 class="text-xl font-semibold">
+            <%= index + 1 %>. <%= command.command %>
+          </h2>
+          <p class="text-gray-400">
+            Aliases: <%= command.aliases.join(', ') %>
+          </p>
+          <div id="command<%= index + 1 %>" class="command-details hidden mt-2">
+            <p><%= command.description %></p>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <script>
+      function toggleCommandDetails(commandId) {
+        const commandDetails = document.getElementById(commandId);
+        commandDetails.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
